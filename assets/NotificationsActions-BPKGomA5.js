@@ -1,0 +1,21 @@
+import{l as e,p as t,t as n,u as r}from"./proxy-CmvwPPa1.js";import{i,n as a,r as o,t as s}from"./index-DL7tGb8x.js";import{t as c}from"./Panel-DAFU_erA.js";var l=t(r(),1),u=e(),d=`notifications-actions-styles`;if(typeof document<`u`&&!document.getElementById(d)){let e=document.createElement(`style`);e.id=d,e.textContent=`
+    @keyframes pulse-cyan {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 6px 3px rgba(0, 240, 255, 0.25);
+      }
+    }
+
+    .notif-scroll::-webkit-scrollbar {
+      width: 3px;
+    }
+    .notif-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .notif-scroll::-webkit-scrollbar-thumb {
+      background: ${a.cyan};
+      border-radius: 3px;
+    }
+  `,document.head.appendChild(e)}var f={fontFamily:o.primary,fontWeight:700,fontSize:10,color:a.textPrimary,letterSpacing:`0.1em`,textTransform:`uppercase`,lineHeight:1.3,marginBottom:2};function p({alert:e,index:t}){let[r,i]=(0,l.useState)(!1);return(0,u.jsxs)(n.div,{initial:{opacity:0,x:30},animate:{opacity:1,x:0},transition:{duration:.4,delay:t*.08},onMouseEnter:()=>i(!0),onMouseLeave:()=>i(!1),style:{display:`flex`,alignItems:`flex-start`,gap:6,padding:`3px 0`,borderBottom:`1px solid rgba(0, 240, 255, 0.06)`,background:r?`rgba(0, 240, 255, 0.04)`:`transparent`,transform:r?`translateX(2px)`:`translateX(0)`,transition:`background 0.2s ease, transform 0.2s ease`,cursor:`default`},children:[(0,u.jsx)(`div`,{style:{width:6,height:6,borderRadius:`50%`,background:e.color,flexShrink:0,marginTop:1}}),(0,u.jsx)(`div`,{style:{flex:1,minWidth:0},children:(0,u.jsx)(`span`,{style:{fontFamily:o.primary,fontWeight:400,fontSize:9,color:a.textSecondary,lineHeight:1.4,overflow:`hidden`,textOverflow:`ellipsis`,whiteSpace:`nowrap`,display:`block`},children:e.text})}),(0,u.jsx)(`span`,{style:{fontFamily:o.mono,fontWeight:400,fontSize:9,color:a.textMuted,flexShrink:0,whiteSpace:`nowrap`,marginTop:2},children:e.time})]})}function m(){return(0,u.jsxs)(`div`,{style:{display:`flex`,flexDirection:`column`,height:`100%`},children:[(0,u.jsx)(`div`,{style:f,children:`AGENT ALERT FEED`}),(0,u.jsx)(`div`,{className:`notif-scroll`,style:{flex:1,minHeight:0,overflowY:`auto`},children:i.alerts.map((e,t)=>(0,u.jsx)(p,{alert:e,index:t},t))})]})}function h(){return(0,u.jsx)(n.button,{whileTap:{scale:.97},style:{height:22,padding:`0 10px`,borderRadius:11,border:`1px solid ${a.cyan}`,background:`transparent`,color:a.cyan,fontFamily:o.primary,fontWeight:600,fontSize:9,textTransform:`uppercase`,cursor:`pointer`,flexShrink:0,transition:`background 0.25s ease, box-shadow 0.25s ease`,letterSpacing:`0.02em`},onMouseEnter:e=>{e.currentTarget.style.background=`rgba(0, 240, 255, 0.15)`,e.currentTarget.style.boxShadow=`0 0 12px rgba(0, 240, 255, 0.3)`},onMouseLeave:e=>{e.currentTarget.style.background=`transparent`,e.currentTarget.style.boxShadow=`none`},onMouseDown:e=>{e.currentTarget.style.background=`rgba(0, 240, 255, 0.25)`},onMouseUp:e=>{e.currentTarget.style.background=`rgba(0, 240, 255, 0.15)`},children:`Approve`})}function g(){return(0,u.jsxs)(`div`,{children:[(0,u.jsx)(`div`,{style:f,children:`ACTION CENTER`}),(0,u.jsx)(`div`,{style:{fontFamily:o.primary,fontWeight:400,fontSize:10,color:a.textSecondary,marginBottom:4},children:`Recommended Optimizations`}),i.actions.map((e,t)=>(0,u.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,justifyContent:`space-between`,gap:8,background:`rgba(0, 240, 255, 0.04)`,borderRadius:8,padding:`5px 8px`,marginBottom:4},children:[(0,u.jsx)(`span`,{style:{fontFamily:o.primary,fontWeight:400,fontSize:9,color:a.textSecondary,lineHeight:1.4,flex:1,minWidth:0,overflow:`hidden`,textOverflow:`ellipsis`,whiteSpace:`nowrap`},children:e.text}),(0,u.jsx)(h,{})]},t))]})}function _({delay:e}={}){return(0,u.jsxs)(`div`,{style:{display:`grid`,gridTemplateRows:s()===`mobile`?`auto auto`:`1fr 1fr`,gap:10,height:`100%`},children:[(0,u.jsx)(c,{delay:e,style:{minHeight:0,overflow:`hidden`},children:(0,u.jsx)(m,{})}),(0,u.jsx)(c,{delay:e+.1,style:{minHeight:0,overflow:`hidden`},children:(0,u.jsx)(g,{})})]})}export{_ as default};
