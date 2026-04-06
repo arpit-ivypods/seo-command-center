@@ -1,0 +1,82 @@
+export const colors = {
+  bgDeep: '#080c10',
+  bgPanel: '#111822',
+  bgPanelHover: '#182230',
+  borderDefault: 'rgba(0, 240, 255, 0.15)',
+  borderHover: 'rgba(0, 240, 255, 0.45)',
+  borderActive: 'rgba(0, 240, 255, 0.7)',
+  cyan: '#00F0FF',
+  cyanGlow: 'rgba(0, 240, 255, 0.35)',
+  purple: '#B983FF',
+  purpleGlow: 'rgba(185, 131, 255, 0.3)',
+  orange: '#FF9F43',
+  orangeGlow: 'rgba(255, 159, 67, 0.3)',
+  green: '#28C76F',
+  greenGlow: 'rgba(40, 199, 111, 0.3)',
+  red: '#FF4C4C',
+  pink: '#FF6B9D',
+  blueAccent: '#4C8BFF',
+  textPrimary: '#FFFFFF',
+  textSecondary: '#8899AA',
+  textMuted: '#556677',
+  textCyan: '#00F0FF',
+};
+
+export const fonts = {
+  primary: "'Inter', sans-serif",
+  mono: "'JetBrains Mono', monospace",
+};
+
+export const sampleData = {
+  marketIntel: [
+    { month: 'Jan', value: 40 },
+    { month: 'Feb', value: 65 },
+    { month: 'Mar', value: 55 },
+    { month: 'Apr', value: 90 },
+    { month: 'May', value: 110 },
+    { month: 'Jun', value: 135 },
+  ],
+  competitorRankings: [
+    { name: 'Competitor A', score: 92, grade: 'A+', sov: 38, color: '#00F0FF' },
+    { name: 'Competitor B', score: 78, grade: 'A', sov: 25, color: '#FF9F43' },
+    { name: 'Competitor C', score: 65, grade: 'B+', sov: 18, color: '#B983FF' },
+    { name: 'Competitor D', score: 50, grade: 'B', sov: 12, color: '#4C8BFF' },
+    { name: 'Competitor E', score: 35, grade: 'C+', sov: 7, color: '#FF6B9D' },
+  ],
+  trafficChart: [30, 35, 32, 45, 50, 48, 60, 75, 70, 85, 95, 110],
+  conversionChart: [50, 52, 48, 55, 60, 58, 65, 68, 72, 70, 73, 74],
+  alerts: [
+    { type: 'critical', color: '#FF4C4C', text: 'Competitor B ranking drop detected — 3 positions lost', time: '5 mins ago' },
+    { type: 'success', color: '#00F0FF', text: 'Content Optimization successful — Blog #47 score: 94', time: '12 mins ago' },
+    { type: 'warning', color: '#FF9F43', text: "New Market trend — 'AI content generation' volume +40%", time: '28 mins ago' },
+    { type: 'info', color: '#28C76F', text: 'Agent health check — All 61 agents operational', time: '1 hour ago' },
+  ],
+  optimizationQueue: [
+    { task: 'Content Optimization — Blog #52', time: '1m 30s', active: true },
+    { task: 'Meta Tag Update — Product Pages', time: '45s', active: true },
+    { task: 'Internal Link Restructure', time: '3m 15s', active: false },
+    { task: 'Schema Markup Generation', time: '2m 00s', active: false },
+  ],
+  actions: [
+    { text: 'Update meta descriptions for 12 underperforming pages', button: 'Approve' },
+    { text: "Regenerate content brief for 'AI Writing Tools' cluster", button: 'Approve' },
+  ],
+  queryClusters: [
+    { text: 'How to use AI for Blog writing?', difficulty: 51, color: '#28C76F' },
+    { text: 'Best SEO tools for startups', difficulty: 67, color: '#FF9F43' },
+    { text: 'Content optimization strategies', difficulty: 43, color: '#B983FF' },
+    { text: 'Keyword research automation', difficulty: 38, color: '#00F0FF' },
+  ],
+  wordCloud: [
+    { word: 'SEO content optimization', size: 18, color: '#00F0FF', bold: true },
+    { word: 'content ideation', size: 16, color: '#FFFFFF', bold: true },
+    { word: 'audience intent', size: 15, color: '#00F0FF', bold: true },
+    { word: 'blog strategy', size: 13, color: '#8899AA', bold: false },
+    { word: 'keyword analysis', size: 12, color: '#B983FF', bold: false },
+    { word: 'search trends', size: 11, color: '#8899AA', bold: false },
+    { word: 'organic traffic', size: 14, color: '#28C76F', bold: false },
+    { word: 'content gap', size: 11, color: '#FF9F43', bold: false },
+    { word: 'SERP ranking', size: 12, color: '#8899AA', bold: false },
+    { word: 'user queries', size: 10, color: '#556677', bold: false },
+  ],
+};

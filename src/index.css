@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-deep: #080c10;
+  --bg-panel: #111822;
+  --bg-panel-hover: #182230;
+  --border-default: rgba(0, 240, 255, 0.15);
+  --border-hover: rgba(0, 240, 255, 0.45);
+  --border-active: rgba(0, 240, 255, 0.7);
+  --cyan: #00F0FF;
+  --cyan-glow: rgba(0, 240, 255, 0.35);
+  --purple: #B983FF;
+  --purple-glow: rgba(185, 131, 255, 0.3);
+  --orange: #FF9F43;
+  --orange-glow: rgba(255, 159, 67, 0.3);
+  --green: #28C76F;
+  --green-glow: rgba(40, 199, 111, 0.3);
+  --red: #FF4C4C;
+  --pink: #FF6B9D;
+  --blue-accent: #4C8BFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #8899AA;
+  --text-muted: #556677;
+  --text-cyan: #00F0FF;
+  --font-primary: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-deep);
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-glow);
+}
+
+/* Panel base styles */
+.panel {
+  background: rgba(17, 24, 34, 0.85);
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 20px rgba(0, 240, 255, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+}
+
+.panel:hover {
+  border-color: var(--border-hover);
+  box-shadow:
+    0 0 30px rgba(0, 240, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Grid layout definitions */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: 14px;
+  padding: 14px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Keyframe animations */
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(40, 199, 111, 0.5);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 8px 4px rgba(40, 199, 111, 0.2);
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.5);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 8px 4px rgba(0, 240, 255, 0.2);
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ── Responsive: Tablet (768-1024px) ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .panel {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* ── Responsive: Mobile (<768px) ── */
+@media (max-width: 767px) {
+  html, body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    height: 100dvh;
+  }
+
+  #root {
+    height: auto;
+    min-height: 100%;
+    min-height: 100dvh;
+  }
+
+  .panel {
+    padding: 12px;
+    border-radius: 8px;
+    height: auto !important;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 10px !important;
+    padding: 10px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding-bottom: 70px !important;
+  }
+}
